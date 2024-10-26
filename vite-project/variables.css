@@ -1,0 +1,16 @@
+:root {
+	--black: #172029;
+	--body-bg: #F2F6FA;
+
+	--button-hover: #348feb;
+	--button-active: #005cb8;
+	--button-disabled: #8ab8e6;
+
+	--blue: #0073E6;
+	--blue-light: #99C7F5;
+	--blue-extra-light: #E6F1FC;
+	--cream: #F2F2F2;
+	--yellow: #FABC22;
+	--red: #ED2C19;
+	--grey: #808080;
+}

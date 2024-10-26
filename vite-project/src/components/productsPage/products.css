@@ -1,0 +1,292 @@
+.products {
+	max-width: 1406px;
+	margin: auto;
+	margin-bottom: 100px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 250px);
+	justify-content: center;
+	gap: 24px;
+	padding: 0 30px;
+	width: 100%;
+}
+
+.products__productcard {
+	width: 250px;
+	height: 358px;
+	background-color: #fff;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.productcard__image {
+	width: 100%;
+	height: 70%;
+}
+
+.productcard__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.productcard__info {
+	padding: 16px;
+}
+
+.productcard__info__name {
+	font-weight: 400;
+	margin-bottom: 4px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	cursor: help;
+}
+
+.productcard__info__rating {
+	margin-bottom: 16px;
+	position: relative;
+	width: 76px;
+}
+
+.stars_empty {
+	width: 76px;
+	height: 16px;
+	fill: white;
+}
+
+.stars-filled__container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 50%;
+}
+
+.stars_filled {
+	width: 76px;
+	height: 16px;
+	fill: var(--yellow);
+}
+
+.productcard__info__price {
+	font-size: 22px;
+	font-weight: 800;
+}
+
+@media screen and (width < 605px) {
+
+	.products {
+		grid-template-columns: 1fr 1fr;
+		padding: 0;
+		gap: clamp(5px, 1.5vw, 15px);
+		justify-items: center;
+	}
+
+
+	.products__productcard {
+		width: clamp(125px, 48vw, 280px);
+		height: 100%;
+	}
+
+	.productcard__info__name {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+		font-size: clamp(12px, 3vw, 14px);
+		white-space: normal;
+		margin-bottom: 7px;
+	}
+
+	.productcard__info__rating {
+		width: 60px;
+	}
+
+	.stars-icon {
+		width: 60px;
+		height: 13px;
+	}
+
+	.productcard__info__price {
+		font-size: 18px;
+	}
+}
+
+/* ============== PRODUCT MAIN CARD ================= */
+
+.product {
+	max-width: 792px;
+	margin: 0 auto;
+}
+
+.product__main {
+	display: flex;
+	background-color: white;
+	border-radius: 16px;
+	margin-bottom: 24px;
+	padding: 24px;
+	gap: 24px;
+}
+
+.go-back-button {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	color: var(--blue);
+	gap: 4px;
+	background: none;
+	border: none;
+	font-weight: 700;
+}
+
+.go-back-button svg {
+	width: 20px;
+	height: 20px;
+	fill: var(--blue);
+}
+
+.product__main__image {
+	max-width: 374px;
+	min-height: 374px;
+	width: 100%;
+	height: 100%;
+}
+
+.product__main__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.product__main__info__title {
+	font-family: "Circe bold";
+	font-weight: normal;
+	font-size: 28px;
+	margin-bottom: 8px;
+}
+
+.product__main__info__rating {
+	margin-bottom: 24px;
+}
+
+.product__main__info__price {
+	font-family: "Circe Extrabold";
+	font-weight: normal;
+	font-size: 28px;
+	margin-bottom: 8px;
+}
+
+.product__main__info__buttons {
+	display: flex;
+	gap: 8px;
+}
+
+.product__main__info__button {
+	margin-bottom: 24px;
+}
+
+.product__main__info__return {
+	margin-bottom: 16px;
+}
+
+.product__main__info__return svg {
+	width: 20px;
+	height: 20px;
+	margin-right: 8px;
+	transform: translateY(20%);
+}
+
+.product__main__info__return h3 {
+	margin-bottom: 8px;
+	display: inline-block;
+}
+
+.product__main__info__return p {
+	font-weight: 400;
+	line-height: 120%;
+}
+
+.product__main__info__note {
+	font-weight: 400;
+	font-size: 12px;
+	color: var(--grey);
+	line-height: 120%;
+}
+
+.product__description {
+	background-color: white;
+	border-radius: 16px;
+	padding: 24px;
+	margin-bottom: 56px;
+}
+
+.product__description__title {
+	font-size: 20px;
+	margin-bottom: 16px;
+}
+
+.product__description__text {
+	font-weight: 400;
+	line-height: 120%;
+}
+
+.product__description__text p {
+	margin-bottom: 8px;
+}
+
+.product__description__text ul {
+	list-style: inside;
+}
+
+.product__description__text ul:not(:last-child) {
+	margin-bottom: 16px;
+}
+
+@media screen and (width < 1080px) {
+	.go-back-button {
+		position: relative;
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (width < 855px) {
+	.go-back-button {
+		position: relative;
+		margin-bottom: 15px;
+	}
+
+	.product__main {
+		flex-direction: column;
+	}
+
+	.product__main__image {
+		align-self: center;
+	}
+}
+
+@media screen and (width < 605px) {
+	.product__main__image {
+		max-width: max-content;
+		min-height: auto;
+		width: 100%;
+		height: 100%;
+	}
+
+	.product__main__info__title {
+		font-size: clamp(16px, 6vw, 20px);
+	}
+
+	.product__main__info__buttons .counter {
+		height: 52px;
+	}
+}
+
+@media screen and (width < 360px) {
+	.product__main__info__buttons {
+		display: flex;
+		gap: 8px;
+		flex-direction: column;
+	}
+}
